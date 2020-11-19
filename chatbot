@@ -1,0 +1,70 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+
+
+
+int main()
+{
+
+	cout << "***Szia én egy AI chatbot vagyok.***\n";
+	cout << "Mondj valamit.\n";
+
+	vector<string> Z = { "hogy" , "Hogy" , "vagy" , "vagy" };
+	string hogy;
+
+	vector<string> Y = { "Mi" , "mi" , "a" , "neved" };
+	string neved;
+
+	vector<string> V = { "hany" , "Hany" , "eves" , "Eves" , "Éves" , "éves"};
+		string eves;
+	
+	cin >> hogy;
+
+	if (count(Z.begin(), Z.end(), hogy))
+	{
+
+		cout << "Köszönöm, kicsit leterheltek az erőforrásaim.\n";
+		cout << "kérdezz még!\n";	
+	}
+
+
+
+	else
+	{
+		
+		cin >> eves;
+
+		if (count(V.begin(), V.end(), eves))
+		{
+			cout << "A tervezőm, folymatosan frissít így minden nap újjá születek :)\n";
+			cout << "Kérdezz még valamit!\n";
+		}
+
+		else
+		{
+			cin >> neved;
+
+			if (count(Y.begin(), Y.end(), neved))
+			{
+				cout << "A nevem XcVbNm-123-AI, köszönöm. :)\n";
+				cout << "Kérdezz még valamit!\n";
+			}
+			else
+			{
+				cout << "Meg tudnád fogalmazni máshogy a kérdést? Ezt így nem értettem.\n";
+			}
+			
+		}
+	}
+
+	//keep_window_open();
+
+
+	//cout << "Meg tudnád fogalmazni máshogy a kérdést? Ezt így nem értettem.\n";
+
+	return 0;	
+}
